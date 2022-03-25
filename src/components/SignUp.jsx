@@ -50,7 +50,7 @@ export default function SignUp(props) {
             <div className="sign-pop-up-bg-points absolute left-0 h-[calc(100vh)] flex flex-col items-center justify-center w-[calc(60vw)]  rounded-r-3xl z-50 bg-[#407BFF] py-16 shadow-2xl">
                 { step === 0 ?
                     <>
-                        <h1 className=" mt-5 m-auto mb-20 text-6xl font-bold text-[#fff] product-sans">Welcome</h1>
+                        <h1 className=" mt-5 m-auto mb-14 text-6xl font-bold text-[#fff] product-sans">Welcome</h1>
                         <form action="" className=" flex flex-col items-center justify-center ">
                             <div className="poppins">
                                 <label htmlFor="firstname" className="block text-[#fff] text-lg">Firstname</label>
