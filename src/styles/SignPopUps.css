@@ -1,0 +1,20 @@
+/* slightly transparent fallback */
+.pop-up-bg {
+    background-color: rgba(255, 255, 255, .7);
+  }
+  
+  /* if backdrop support: very transparent and blurred */
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .pop-up-bg {
+      background-color: rgba(255, 255, 255, .15);
+      -webkit-backdrop-filter: blur(25px);
+      backdrop-filter: blur(25px);
+    }
+  }
+
+.sign-pop-up-bg-points {
+    background-image: url('../assets/bg_inversed.png');
+    background-position: left 45% top 55%;
+    background-repeat: no-repeat;
+    background-size: 90% 87%;
+}

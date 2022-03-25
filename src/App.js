@@ -1,16 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Layout from './components/Layout'
+import { BrowserRouter } from 'react-router-dom';
+class App extends Component {
 
-import {RiEmpathizeFill} from "react-icons/ri"
-import ChoicePage from './pages/ChoicePage';
-import IntroPage from "./pages/IntroPage"
-function App() {
-  return (
-    <div className="App ">
- 
-       {/* <IntroPage/> */}
-       <ChoicePage/>
-    </div>
-  );
+  render() {
+    return (
+      <BrowserRouter>
+          <div className="App">
+            <Layout />
+          </div>
+        </BrowserRouter>
+    )
+  }
 }
 
-export default App;
+export default App
