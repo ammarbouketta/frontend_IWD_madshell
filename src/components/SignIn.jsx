@@ -15,12 +15,12 @@ function SignIn() {
                <label htmlFor="email" className="text-[#fff] text-md">Email</label><br/>
                <input type="email" id="email" name="email" placeholder="Enter Your Email Address" className="placeholder:text-[#fff] text-[#fff] text-md outline-none bg-[#75A0FF] rounded-3xl py-2 px-3 w-[calc(30vw)] m-auto my-3 border border-[#fff]"/><br/>
                <label htmlFor="password" className="text-[#fff] text-md">Password</label><br/>
-                <input type="password" id="password" name="password" placeholder="Enter Your Password" className="placeholder:text-[#fff] text-[#fff] text-md outline-none bg-[#75A0FF] rounded-3xl py-2 px-3 w-[calc(30vw)] w-3/4 m-auto my-3 border border-[#fff] "/><br/>
+                <input type="password" id="password" name="password" placeholder="Enter Your Password" className="placeholder:text-[#fff] text-[#fff] text-md outline-none bg-[#75A0FF] rounded-3xl py-2 px-3 w-[calc(30vw)]  m-auto my-3 border border-[#fff] "/><br/>
                 </div>
                <h1 className="w-fit m-auto text-[#fff] text-xl">or</h1>
                <div className="">
-                   <div className="flex rounded items-center justify-center bg-[#fff] rounded-3xl py-1 w-64 m-auto my-5 w-[calc(25vw)] text-md"><BsFacebook className="text-[#3b5998]  mr-3 text-2xl "/>Continue With Facebook</div>
-                   <div className="flex rounded items-center justify-center bg-[#fff] rounded-3xl py-1 w-64 m-auto my-5 w-[calc(25vw)] text-md"><FcGoogle className=" mr-3 text-2xl  "/>Continue With Google</div>
+                   <button className="flex rounded items-center justify-center bg-[#fff] rounded-3xl py-1 w-64 m-auto my-5 w-[calc(25vw)] text-md"><BsFacebook className="text-[#3b5998]  mr-3 text-2xl "/>Continue With Facebook</button>
+                   <button className="flex rounded items-center justify-center bg-[#fff] rounded-3xl py-1 w-64 m-auto my-5 w-[calc(25vw)] text-md"><FcGoogle className=" mr-3 text-2xl  "/>Continue With Google</button>
                </div>
                <input type="submit" value="Sign In" className="text-md bg-[#fff] rounded-2xl px-6 py-1  w-fit m-auto mt-5 cursor-pointer "/>
            </form>
