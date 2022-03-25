@@ -14,6 +14,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-#choice,#intro,#getStarted{
+#choice,#intro,#getStarted,#quizes{
   background-image: url('./assets/bg.png');
 }
