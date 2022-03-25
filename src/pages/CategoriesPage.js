@@ -10,7 +10,7 @@ export class CategoriesPage extends Component {
 
   render() {
     return (
-      <div className='container bg-[#407BFF] px-32 py-24 overflow-y-hidden'>
+      <div className='container bg-[#407BFF] px-32 py-24 overflow-y-hidden h-screen'>
           <h1 className='product-sans text-7xl text-white font-bold mb-16'>You are ..</h1>
           <div className="flex justify-center text-center space-x-8 ">
               <div className='bg-white pt-10 pb-16 px-12 rounded-3xl category-card w-1/4 cursor-pointer' onClick={() => {
