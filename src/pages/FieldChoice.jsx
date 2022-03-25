@@ -19,7 +19,7 @@ function FieldChoice() {
       <Header/>
       <div id="getStarted" className=' h-[calc(100vh-80px)] flex flex-col items-center justify-center px-32   z-0 intro-bg-points'>
               
-           <h1 className="mb-16 text-3xl w-fit text-[#263238] font-bold z-10 flex flex-col items-center justify-center">Choose a field that you are interested in</h1>
+           <h1 className="mb-16 text-5xl w-fit text-[#263238] font-bold z-10 flex flex-col text-center justify-center">Choose a field that you are<br/> interested in</h1>
            <div className="relative flex  items-center justify-center z-99 mb-10  w-full">
                <button className="shadow-xl  mx-3 flex flex-col items-center justify-between bg-[#fff] rounded-xl" onClick={() => {
                 window.history.pushState({foo: "bar"}, "page 2", "letsGetStarted");

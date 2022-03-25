@@ -35,7 +35,12 @@ export class InterestsPage extends Component {
     const InterestsList = this.state.fields.map((field) => {
         i++;
         return (
-            <input key={i - 1 } type="button" value={field} className="poppins text-lg font-medium text-[#fff] bg-[#407BFF] border-2 border-white rounded-3xl px-12 py-3  w-fit mx-8 mt-5 cursor-pointer hover:bg-[#fff] hover:text-[#407BFF] focus:bg-[#fff] focus:text-[#407BFF]"/>
+            <input key={i - 1 } type="button" value={field} className="poppins text-lg font-medium text-[#fff] bg-[#407BFF] border-2 border-white rounded-3xl px-12 py-3  w-fit mx-8 mt-5 cursor-pointer hover:bg-[#fff] hover:text-[#407BFF]" onClick={(event) => {
+              event.target.classList.remove('text-[#fff]')
+              event.target.classList.remove('bg-[#407BFF]')
+              event.target.classList.add('bg-[#fff]')
+              event.target.classList.add('text-[#407BFF]')
+            }}/>
         );
       });
     return (

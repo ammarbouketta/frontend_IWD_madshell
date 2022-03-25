@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import '../styles/SignPopUps.css'
 
@@ -9,7 +9,13 @@ import { Link } from 'react-router-dom'
 
 export default function SignUp(props) {
 
-    const [step, setStep] = useState(0);
+  const [step, setStep] = useState(0);
+
+  useEffect(() => {
+  if (props.open == false) {
+    setStep(0)
+  }
+  })
 
 
   return (
@@ -47,14 +53,33 @@ export default function SignUp(props) {
                         <h1 className=" mt-5 m-auto mb-20 text-6xl font-bold text-[#fff] product-sans">Welcome</h1>
                         <form action="" className=" flex flex-col items-center justify-center ">
                             <div className="poppins">
-                                <label htmlFor="email" className="text-[#fff] text-lg">Email</label><br/>
-                                <input type="email" id="email" name="email" placeholder="Enter Your Email Address" className=" placeholder:text-[#fff] text-[#fff] text-md outline-none bg-[#75A0FF] rounded-3xl w-[calc(27vw)] px-6 py-3 m-auto mt-2 mb-3 border border-[#fff]"/><br/>
-                                <label htmlFor="email" className="text-[#fff] text-lg">Email</label><br/>
-                                <input type="email" id="email" name="email" placeholder="Enter Your Email Address" className=" placeholder:text-[#fff] text-[#fff] text-md outline-none bg-[#75A0FF] rounded-3xl w-[calc(27vw)] px-6 py-3 m-auto mt-2 mb-3 border border-[#fff]"/><br/>
-                                <label htmlFor="email" className="text-[#fff] text-lg">Email</label><br/>
-                                <input type="email" id="email" name="email" placeholder="Enter Your Email Address" className=" placeholder:text-[#fff] text-[#fff] text-md outline-none bg-[#75A0FF] rounded-3xl w-[calc(27vw)] px-6 py-3 m-auto mt-2 mb-3 border border-[#fff]"/><br/>
-                                <label htmlFor="email" className="text-[#fff] text-lg">Email</label><br/>
-                                <input type="email" id="email" name="email" placeholder="Enter Your Email Address" className=" placeholder:text-[#fff] text-[#fff] text-md outline-none bg-[#75A0FF] rounded-3xl w-[calc(27vw)] px-6 py-3 m-auto mt-2 mb-3 border border-[#fff]"/><br/>
+                                <label htmlFor="firstname" className="block text-[#fff] text-lg">Firstname</label>
+                                <input type="firstname" id="firstname" name="firstname" placeholder="Enter Your Firstname" className=" placeholder:text-[#fff] text-[#fff] text-md outline-none bg-[#75A0FF] rounded-3xl w-[calc(27vw)] px-6 py-3 m-auto mt-2 mb-3 border border-[#fff]"/>
+                                <label htmlFor="Lastname" className="block text-[#fff] text-lg">Lastname</label>
+                                <input type="Lastname" id="Lastname" name="Lastname" placeholder="Enter Your LAstname" className=" placeholder:text-[#fff] text-[#fff] text-md outline-none bg-[#75A0FF] rounded-3xl w-[calc(27vw)] px-6 py-3 m-auto mt-2 mb-3 border border-[#fff]"/>
+                                <label htmlFor="date" className="block text-[#fff] text-lg">
+                                  Birth Date
+                                </label>
+                                <input
+                                  type="date"
+                                  id="date"
+                                  name="date"
+                                  min="2018-01-01" 
+                                  max="2018-12-31"
+                                  className="placeholder:text-[#fff] text-[#fff] text-md outline-none bg-[#75A0FF] rounded-3xl w-[calc(27vw)] px-6 py-3 m-auto mt-2 mb-3 border border-[#fff]"
+                                />
+                                <label htmlFor="school-year" className="block text-[#fff] text-lg">
+                                  School Year
+                                </label>
+                                <select
+                                  id="school-year"
+                                  name="school-year"
+                                  className="placeholder:text-[#fff] text-[#fff] text-md outline-none bg-[#75A0FF] rounded-3xl w-[calc(27vw)] px-6 py-3 m-auto mt-2 mb-3 border border-[#fff]"
+                                >
+                                  <option>2nd Grade</option>
+                                  <option>3rd Grade</option>
+                                  <option>7th Grade</option>
+                                </select>
                                 </div>
                             <input type="button" onClick={() => setStep(1)} value="Next" className="poppins text-lg font-medium bg-[#fff] text-[#407BFF] rounded-3xl px-12 py-3  w-fit m-auto mt-5 cursor-pointer "/>
                         </form>
