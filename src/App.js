@@ -1,23 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
+import {RiEmpathizeFill} from "react-icons/ri"
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <h1 className="font-bold bg-[#754] text-[#fff]">Testing Tailwind +icons</h1>
+       <RiEmpathizeFill className="w-24 h-24"/>
     </div>
   );
 }
