@@ -5,6 +5,8 @@ import IntroPage from '../pages/IntroPage';
 import ChoicePage from '../pages/ChoicePage';
 import CategoriesPage from '../pages/CategoriesPage';
 import InterestsPage from '../pages/InterestsPage'
+import LetGetStarted from "../pages/LetGetStarted"
+import FieldChoice from '../pages/FieldChoice'
 
 export default class Layout extends Component {
 
@@ -22,6 +24,8 @@ export default class Layout extends Component {
                 <Route path="/menu" element={<ChoicePage />} />
                 <Route path="/categories" element={<CategoriesPage />}/>
                 <Route path="/interests" element={<InterestsPage />}/>
+                <Route path="/letsGetStarted" element={<LetGetStarted/>} />
+                <Route path="/fields" element={<FieldChoice/>} />
                 <Route
                     path="*"
                     element={<Navigate to="/portal" />}

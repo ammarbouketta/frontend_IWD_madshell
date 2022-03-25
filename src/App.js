@@ -26,7 +26,7 @@ class App extends Component {
 //        <LetGetStarted/>
 //        <FieldChoice/>
 //     </div>
-  );
+  // );
 }
 
 export default App
