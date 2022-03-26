@@ -10,7 +10,10 @@ class App extends Component {
     return (
       <BrowserRouter>
           <div className="App">
-          <img src={Logo} alt="I CAREer" className='absolute mt-8 ml-20 z-50' />
+          <img src={Logo} alt="I CAREer" className='absolute mt-8 ml-20 z-50 cursor-pointer' onClick={() => {
+                window.history.pushState({foo: "bar"}, "page 2", "/");
+                window.history.go(0);
+              }}/>
             <Layout />
           </div>
         </BrowserRouter>

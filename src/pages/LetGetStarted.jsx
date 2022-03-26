@@ -27,7 +27,7 @@ function LetGetStarted(props) {
         </div>
 
         {from === "arcades" ?
-            <Link to="/menu" className=" w-fit  flex flex-col items-center justify-center font-bold text-2xl py-2 px-5 bg-[#FFC727] text-[#fff] rounded ">
+            <Link to="/arcades" className=" w-fit  flex flex-col items-center justify-center font-bold text-2xl py-2 px-5 bg-[#FFC727] text-[#fff] rounded ">
             Let's get started!
             </Link>
           :

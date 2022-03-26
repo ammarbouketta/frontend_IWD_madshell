@@ -12,6 +12,8 @@ import ValuesPage from '../pages/ValuesPage';
 import Subs from '../pages/Subs';
 import SubsIntro from '../pages/SubsIntro';
 import Payment from '../pages/Payment';
+import ArcadesPage from '../pages/ArcadesPage';
+import ArcadesDetailsPage from '../pages/ArcadeDetailsPage';
 
 export default class Layout extends Component {
 
@@ -36,6 +38,8 @@ export default class Layout extends Component {
                 <Route path="/activeSubs" element={<Subs/>} />
                 <Route path="/buy" element={<SubsIntro/>} />
                 <Route path="/offers" element={<Payment/>} />
+                <Route path="/arcades" element={<ArcadesPage />} />
+                <Route path="/arcadesDetails" element={<ArcadesDetailsPage />} />
                 <Route
                     path="*"
                     element={<Navigate to="/portal" />}
