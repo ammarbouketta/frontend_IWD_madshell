@@ -15,7 +15,7 @@ function SubsIntro() {
       <div className="h-screen" > 
      
       <Header/>
-      <div id="subs" className='relative h-[calc(100vh-80px)] flex flex-col items-center justify-between py-20 px-32  w-full z-0 intro-bg-points'>
+      <div id="subs" className='relative h-[calc(100vh-80px)] flex flex-col items-center justify-between py-10 px-32  w-full z-0 intro-bg-points'>
               <div className="w-full  flex items-center justify-between ">
                   <div className="w-full flex  items-center justify-center  px-20 mb-8">
                         

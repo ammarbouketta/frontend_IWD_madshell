@@ -1,77 +1,107 @@
 import React from 'react';
-
-import explorePaths from "../assets/explorePaths.png"
-import tryOurQuiz from "../assets/tryOurQuiz.png"
-import Footer from '../components/Footer';
 import  { useState } from 'react';
 import ProgressBar from "@ramonak/react-progress-bar";
 import Header from '../components/Header';
-import getStarted from "../assets/getStarted.png"
 import secondRect from "../assets/secondRect.png"
 import quizImage from "../assets/quizImage.png"
-import {FiCheckSquare} from "react-icons/fi"
-import {GrCheckbox} from "react-icons/gr"
-
-import '../styles/Intro.css'
-
 function QuizPage() {
     const questions = [
 		{
             key:1,
-			questionText: 'What is the capital of France?',
+			questionText: 'Are you a numbers whiz?',
 			answerOptions: [
-				{ answerText: 'New York', isCorrect: false,isChecked:false },
-				{ answerText: 'London', isCorrect: false,isChecked:false },
-				{ answerText: 'Paris', isCorrect: true,isChecked:false },
-				{ answerText: 'Dublin', isCorrect: false ,isChecked:false},
+				{ answerText: "Yes! I'm the next Einstein!",  },
+				{ answerText: "I'm good with math, but it's not my favorite subject.",  },
+				{ answerText: "No - it's really not my thing.", },
+				
 			],
 		},
 		{
             key:2,
-			questionText: 'Who is CEO of Tesla?',
+			questionText: "Are you good at writing?",
 			answerOptions: [
-				{ answerText: 'Jeff Bezos', isCorrect: false,isChecked:false },
-				{ answerText: 'Elon Musk', isCorrect: true,isChecked:false },
-				{ answerText: 'Bill Gates', isCorrect: false ,isChecked:false},
-				{ answerText: 'Tony Stark', isCorrect: false,isChecked:false },
+				{ answerText: "Yes! I'm the next Dickens!",  },
+				{ answerText: "Yes - just don't ask me to write anything more than a few pages",  },
+				{ answerText: "I write well, but I don't enjoy it so much.",  },
+			
 			],
 		},
 		{
             key:3,
-			questionText: 'The iPhone was created by which company?',
+			questionText: "Are you a tech geek?",
 			answerOptions: [
-				{ answerText: 'Apple', isCorrect: true ,isChecked:false},
-				{ answerText: 'Intel', isCorrect: false,isChecked:false },
-				{ answerText: 'Amazon', isCorrect: false,isChecked:false },
-				{ answerText: 'Microsoft', isCorrect: false,isChecked:false },
+				{ answerText: "Yes! Tech comes naturally to me.",  },
+				{ answerText: "Yes - but it's more of a hobby for me",  },
+				{ answerText: "No - unless there's drama in the group chat, I try to avoid long pieces of writing.",  },
 			],
 		},
 		{
             key:4,
-			questionText: 'How many Harry Potter books are there?',
+			questionText: "Languages - can you learn them easily?",
 			answerOptions: [
-				{ answerText: '1', isCorrect: false,isChecked:false },
-				{ answerText: '4', isCorrect: false,isChecked:false },
-				{ answerText: '6', isCorrect: false,isChecked:false },
-				{ answerText: '7', isCorrect: true,isChecked:false },
+				{ answerText: "I know my first language, and some words and phrases I picked up at school.",  },
+				{ answerText: "I speak a lot of languages.",  },
+				{ answerText: "Not really, I'm reliant on having a mutual language with the locals.",  },
+				
 			],
 		},
+		{
+            key:5,
+			questionText: "Are you good at teaching?",
+			answerOptions: [
+				{ answerText: "Yes! I can turn any space into my classroom!",  },
+				{ answerText: "I can explain things, yes.",  },
+				{ answerText: "I can show someone how to do something when needed.",  }, 
+				{ answerText: "Not in this lifetime.",  },
+			],
+		},
+		{
+            key:6,
+			questionText: "What do you want to be?",
+			answerOptions: [
+				{ answerText: "Take care of people and help them",  },
+				{ answerText: "Defend people",  },
+				{ answerText: "Paint and design",  },  
+				{ answerText: "Write about social problems",  },
+				{ answerText: "Solve people problems",  },
+			],
+		},
+		{
+            key:7,
+			questionText:"What kind of job you want?",
+			answerOptions: [
+				{ answerText: "Going to the office",  },
+				{ answerText: "Research job",  },
+				{ answerText: "construction and engineering",  },
+			],
+		},
+		{
+            key:8,
+			questionText: "What was your favorite subject in school?",
+			answerOptions: [
+				{ answerText: "Math",  },
+				{ answerText: "Science",  },
+				{ answerText: "Languages",  },  
+				{ answerText: "Law",  },
+				{ answerText: "painting",  },		],
+		},
+		
 	];
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
-    const [score, setScore] = useState(0);
     const [showImage, setShowImage] = useState(true);
     const [answers, setAnswers] = useState([]);
 	const handleAnswerOptionClick = (answerOption) => {
 		// if (answerOption.isCorrect) {
 		// 	setScore(score + 1);
         // }
-        setAnswers(answers+"*"+answerOption.answerText)
+        setAnswers(answers+"*"+questions[currentQuestion].questionText+"@"+answerOption.answerText)
         answerOption.isChecked=!answerOption.isChecked
         const nextQuestion = currentQuestion + 1;
-        if(questions.length==nextQuestion){
-            setShowImage(false)
+        if(questions.length===nextQuestion){
+			setShowImage(false)
+			
         }
 		if (nextQuestion < questions.length) {
 			setCurrentQuestion(nextQuestion);
@@ -83,7 +113,7 @@ function QuizPage() {
       <div className="h-[calc(100vh)]" > 
      
       <Header/>
-      <div id="quizes" className=' h-[calc(100vh-80px)] flex  items-center justify-between px-40   z-0 intro-bg-points'>
+      <div id="quizes" className=' h-[calc(100vh-80px)] flex  items-center justify-between px-40   z-0'>
               
               <div >
             
@@ -120,7 +150,7 @@ function QuizPage() {
                         <div className="flex  items-center justify-between px-8">
                             <h3 className="text-lg font-medium  ">Progress: </h3>
                             <div className="w-96 h-6 ">
-                                 <ProgressBar completed={currentQuestion*100/questions.length} bgColor={"#FFC727"} />
+                                 <ProgressBar completed={parseInt(currentQuestion*100/questions.length)} bgColor={"#FFC727"} />
                             </div>
                         </div>
 					</div>
@@ -137,7 +167,3 @@ function QuizPage() {
   )
   }
 export default QuizPage
-
-
-
-
