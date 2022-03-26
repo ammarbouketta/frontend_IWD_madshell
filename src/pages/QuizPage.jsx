@@ -11,6 +11,9 @@ import secondRect from "../assets/secondRect.png"
 import quizImage from "../assets/quizImage.png"
 import {FiCheckSquare} from "react-icons/fi"
 import {GrCheckbox} from "react-icons/gr"
+
+import '../styles/Intro.css'
+
 function QuizPage() {
     const questions = [
 		{
@@ -80,7 +83,7 @@ function QuizPage() {
       <div className="h-[calc(100vh)]" > 
      
       <Header/>
-      <div id="quizes" className=' h-[calc(100vh-80px)] flex  items-center justify-between px-40   z-0'>
+      <div id="quizes" className=' h-[calc(100vh-80px)] flex  items-center justify-between px-40   z-0 intro-bg-points'>
               
               <div >
             

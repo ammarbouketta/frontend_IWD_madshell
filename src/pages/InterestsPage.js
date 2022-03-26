@@ -44,7 +44,7 @@ export class InterestsPage extends Component {
         );
       });
     return (
-      <div className='container bg-[#407BFF] px-32 py-24 overflow-y-hidden h-screen'>
+      <div className=' bg-[#407BFF] px-32 py-24 overflow-y-hidden h-screen'>
           <h1 className='product-sans text-7xl text-white font-bold mb-2'>Choose your interests</h1>
           <p className="poppins text-3xl text-white mb-16 font-light">Help us know more about you</p>
           <div className="flex justify-start text-center space-x-8 w-full flex-wrap">

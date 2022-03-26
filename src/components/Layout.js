@@ -7,7 +7,11 @@ import CategoriesPage from '../pages/CategoriesPage';
 import InterestsPage from '../pages/InterestsPage'
 import LetGetStarted from "../pages/LetGetStarted"
 import FieldChoice from '../pages/FieldChoice'
+<<<<<<< HEAD
 import QuickPage from '../pages/QuizPage'
+=======
+import QuizPage from '../pages/QuizPage';
+>>>>>>> 6226759b887084cc54006c424a932b78e7420cb4
 
 export default class Layout extends Component {
 
