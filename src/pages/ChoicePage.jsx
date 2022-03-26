@@ -16,10 +16,10 @@ function ChoicePage() {
       <div className="h-[calc(100vh)]" > 
      
       <Header/>
-      <div id="choice" className='relative h-[calc(100vh-80px)] flex flex-col items-center justify-center px-32 mt-3 z-0 intro-bg-points'>
+      <div id="choice" className='relative h-[calc(100vh-95px)] flex flex-col items-center justify-center px-32 mt-3 z-0 intro-bg-points'>
            <h1 className="product-sans mb-10 text-5xl w-fit text-[#263238] font-bold z-10">How Do You Want To explore?</h1>
            <div className="relative flex  justify-center z-99 mb-10  w-full">
-               <Link to="/letsGetStarted" state={{ from: "arcades" }} className="shadow-xl px-28 pb-14 pt-9 mr-10 rounded-3xl flex flex-col items-center justify-between bg-[#fff] border-2 border-dashed border-[#407BFF]">
+               <Link to="/fields" className="shadow-xl px-28 pb-14 pt-9 mr-10 rounded-3xl flex flex-col items-center justify-between bg-[#fff] border-2 border-dashed border-[#407BFF]">
                      <h1 className="product-sans w-fit mt-5 mb-5 m-auto text-4xl font-bold text-[#407BFF]">Arcades</h1>
                      <img src={explorePaths} alt="" className="block w-44 h-56 m-auto"/>
                </Link>

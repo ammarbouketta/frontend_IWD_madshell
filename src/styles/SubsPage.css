@@ -1,0 +1,10 @@
+.subs-card {
+    /* Frame 113 */
+
+background: #FFFFFF;
+border: 2px solid #FF725E;
+box-sizing: border-box;
+box-shadow: 5px 10px 20px rgba(248, 89, 59, 0.25);
+border-radius: 20px;
+
+}

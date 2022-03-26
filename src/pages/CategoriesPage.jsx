@@ -13,7 +13,7 @@ function CategoriesPage(){
       <div className='container bg-[#407BFF] px-32 py-24 overflow-y-hidden h-screen'>
           <h1 className='product-sans text-7xl text-white font-bold mb-16'>You are ..</h1>
           <div className="flex justify-center text-center space-x-8 ">
-              <div className='bg-white py-10 px-12 rounded-3xl category-card w-1/4 cursor-pointer flex flex-col items-center justify-center' onClick={() => {
+              <div className='bg-white py-10 px-12 rounded-3xl category-card w-1/4 cursor-pointer' onClick={() => {
                 window.history.pushState({foo: "bar"}, "page 2", "interests");
                 window.history.go(0);
               }}>

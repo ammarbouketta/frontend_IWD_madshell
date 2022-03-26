@@ -4,9 +4,11 @@ import firstBottom from "../assets/firstBottom.png"
 import firstRect from "../assets/firstRect.png"
 import firstBottomRight from "../assets/firstBottomRight.png"
 import SignIn from '../components/SignIn';
-import SignUp from '../components/SignUp'
+import SignUp from '../components/SignUp';
 
 import { Fragment, useRef, useState } from 'react'
+
+import { Link } from 'react-router-dom'
 
 import '../styles/Intro.css'
 
@@ -30,11 +32,12 @@ function IntroPage() {
                <h1 className="text-[#3361C9] relative flex items-center  font-bold text-6xl mt-4 product-sans"><span className="block z-30 ml-6">Career path </span><img src={firstRect} alt="" className="absolute z-20 w-72 ml-2 top-8"/></h1>
                </div>
                <p className="text-2xl mt-10 poppins">
-               Majors, jobs, careers ... All yours! <br/> with name
+               Majors, jobs, careers ... All yours! <br/>with  <span className='text-[#407BFF] font-bold'>I CAREer</span>
                </p>
                
                <button className="text-[#407BFF] text-lg border-[#407BFF] border-2 rounded bg-[#fff] px-12 py-1 font-bold mr-3 mb-24 mt-10 poppins" type="button" onClick={() => setOpenSignIn(true)}>Sign In</button>
                <button className="text-[#fff] text-lg border-[#407BFF] border-2 rounded bg-[#407BFF] px-12 py-1 font-bold ml-3 mb-24 mt-10 poppins" type="button" onClick={() => setOpenSignUp(true)}>Sign up</button>
+               <Link to="/proServicesIntro" className="text-[#fff] text-lg border-[#407BFF] border-2 rounded bg-[#407BFF] px-12 py-1 font-bold ml-3 mb-24 mt-10 poppins" type="button" >Pro Services</Link>
            </div>
            <div className="flex items-center justify-center w-fit  ">
                <img src={first} alt="" className="w-3/4 h-1/2"/>

@@ -7,11 +7,11 @@ import CategoriesPage from '../pages/CategoriesPage';
 import InterestsPage from '../pages/InterestsPage'
 import LetGetStarted from "../pages/LetGetStarted"
 import FieldChoice from '../pages/FieldChoice'
-<<<<<<< HEAD
-import QuickPage from '../pages/QuizPage'
-=======
 import QuizPage from '../pages/QuizPage';
->>>>>>> 6226759b887084cc54006c424a932b78e7420cb4
+import ValuesPage from '../pages/ValuesPage';
+import Subs from '../pages/Subs';
+import SubsIntro from '../pages/SubsIntro';
+import Payment from '../pages/Payment';
 
 export default class Layout extends Component {
 
@@ -31,7 +31,11 @@ export default class Layout extends Component {
                 <Route path="/interests" element={<InterestsPage />}/>
                 <Route path="/letsGetStarted" element={<LetGetStarted/>} />
                 <Route path="/fields" element={<FieldChoice/>} />
-                <Route path="/quizes" element={<QuickPage />} />
+                <Route path="/quizes" element={<QuizPage />} />
+                <Route path="/proServicesIntro" element={<ValuesPage/> } />
+                <Route path="/activeSubs" element={<Subs/>} />
+                <Route path="/buy" element={<SubsIntro/>} />
+                <Route path="/offers" element={<Payment/>} />
                 <Route
                     path="*"
                     element={<Navigate to="/portal" />}
