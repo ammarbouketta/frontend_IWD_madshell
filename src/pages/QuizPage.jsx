@@ -41,7 +41,8 @@ function QuizPage() {
             
               {showScore ? (
 				<div className='score-section font-medium text-xl'>
-					Your answers are: {answers} 
+					Your answers are: {"computer scientiste"} 
+                   
 				</div>
 			) : (
 				<>
